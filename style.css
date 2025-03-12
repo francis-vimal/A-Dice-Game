@@ -1,0 +1,79 @@
+body {
+    background: rgb(27, 27, 27);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    font-size: 44px;
+}
+
+.players-container {
+    display: flex;
+    flex-direction: row;
+    gap: 350px;
+    justify-content: center;
+}
+
+.dice {
+    background-color: rgb(0, 0, 0);
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-1-container .dice {
+    background-color: black;
+}
+
+.dice-face > * {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin:20px;
+}
+
+.dice-face {
+    display: none
+}
+
+.dice-face-2 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.dice-face-3 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    rotate: 135deg;
+}
+
+.dice-face-4 {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 3);
+}
+
+.dice-face-5 {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.dice-face-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 3);
+}
