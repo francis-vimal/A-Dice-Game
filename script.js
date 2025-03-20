@@ -12,12 +12,14 @@ function diceRoll2() {
 }
 
 function winner() {
+    document.querySelector(".result-container").style.visibility = "visible";
+    var result = document.querySelector(".result");
     if(dice1 > dice2) {
-        console.log("player 1 wins");
+        result.innerHTML = "Player 1 wins"
     } else if(dice2 > dice1) {
-        console.log("player 2 wins");
+        result.innerHTML = "Player 2 wins"
     } else {
-        console.log("draw");
+        result.innerHTML = "DRAW"
     }
 }
 
