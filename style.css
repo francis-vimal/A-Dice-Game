@@ -94,6 +94,7 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 50%;
@@ -111,7 +112,19 @@ body {
 }
 
 .result {
-    margin: 15px 0 0 0;
+    margin: 15px 0 15px 0;
     font-size: 84px;
     color:rgb(19, 19, 19);
+}
+
+#rerollBtn {
+    width: 180px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#rerollBtn:hover {
+    opacity: 0.8;
 }

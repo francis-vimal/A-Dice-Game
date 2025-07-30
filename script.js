@@ -1,7 +1,4 @@
-var dice1 = Math.floor(Math.random() * 6) + 1;
-console.log("dice 1 rand: ", dice1);
-var dice2 = Math.floor(Math.random() * 6) + 1;
-console.log("dice 2 rand: ", dice2);
+var dice1 = 0, dice2 = 0;
 
 function diceRoll1() {
     document.querySelector(`.player-1-container .dice-face-${dice1}`).classList.toggle('notVisible');
@@ -12,7 +9,9 @@ function diceRoll2() {
 }
 
 function winner() {
-    document.querySelector(".result-container").style.visibility = "visible";
+    setTimeout(() => {
+        document.querySelector(".result-container").style.visibility = "visible";
+    }, 1000);
     var result = document.querySelector(".result");
     if(dice1 > dice2) {
         result.innerHTML = "Player 1 wins"
@@ -23,7 +22,22 @@ function winner() {
     }
 }
 
-diceRoll1();
-diceRoll2();
+function diceRoll() {
+    dice1 = Math.floor(Math.random() * 6) + 1;
+    dice2 = Math.floor(Math.random() * 6) + 1;
 
-winner();
+    diceRoll1();
+    diceRoll2();
+    
+    winner();
+}
+
+diceRoll();
+
+document.getElementById('rerollBtn').addEventListener('click', () => {
+    diceRoll1();
+    diceRoll2();
+    document.querySelector(".result-container").style.visibility = "hidden";
+
+    diceRoll();
+})
